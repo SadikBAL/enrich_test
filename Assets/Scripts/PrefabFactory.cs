@@ -63,10 +63,11 @@ public class PrefabFactory : MonoBehaviour
         l_end_pos = GameBlockStart.GetEndPos();
         Path.AddRange(GameBlockStart.GetPath());
         int random;
+
         foreach (IGameBlock t in GameBlockList)
         {
             t.SpeedUp(game_speed);
-            random = Random.Range(0, 10);
+            random = Random.Range(0, 8);
             if(random == 3)
             {
                 t.GetGameObject().transform.position = l_end_pos.position;
